@@ -1,0 +1,25 @@
+﻿@model exp.Template.Infrastructure.Entities.Hrana
+
+<h2>Editare Hrana</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label>Nume:</label>
+        <input asp-for="Nume" />
+    </div>
+    <div>
+        <label>Descriere:</label>
+        <input asp-for="Descriere" />
+    </div>
+    <div>
+        <label>Pret:</label>
+        <input asp-for="Pret" type="text" />
+    </div>
+    <div>
+        <label>Stoc:</label>
+        <input asp-for="Stoc" type="number" step="1" />
+    </div>
+    <button type="submit">Salveaza</button>
+</form>
+<a asp-action="Index" asp-controller="Hrana">Inapoi la lista</a>

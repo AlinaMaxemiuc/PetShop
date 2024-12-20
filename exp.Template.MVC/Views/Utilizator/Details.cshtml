@@ -1,0 +1,11 @@
+﻿@model exp.Template.Infrastructure.Entities.Utilizator
+
+<h2>Detalii Utilizator</h2>
+
+<div>
+    <h3>@Model.Nume</h3>
+    <p>Prenume: @Model.Prenume</p>
+    <p>Email: @Model.Email</p>
+    <p>Parola: @Model.Parola</p>
+    <a asp-action="Index" asp-controller="Utilizator">Inapoi la lista</a>
+</div>

@@ -1,0 +1,11 @@
+﻿@model exp.Template.Infrastructure.Entities.Animale
+
+<h2>Detalii Animal</h2>
+
+<div>
+    <h3>@Model.Specie</h3>
+    <p>Gen: @Model.Gen</p>
+    <p>Varsta: @Model.Varsta</p>
+    <p>Greutate: @Model.Greutate kg</p>
+    <a asp-action="Index" asp-controller="Animal">Inapoi la lista</a>
+</div>

@@ -1,0 +1,33 @@
+﻿@model exp.Template.Infrastructure.Entities.Abonament
+
+<h2>Create Abonament</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Utilizator:</label>
+        <input asp-for="IdUtilizator" />
+    </div>
+    <div>
+        <label>Hrana:</label>
+        <input asp-for="IdHrana" />
+    </div>
+    <div>
+        <label>Frecventa:</label>
+        <input asp-for="Frecventa" type="number"  />
+    </div>
+    <div>
+        <label>Data incepere:</label>
+        <input asp-for="DataIncepere" type="date"  />
+    </div>
+    <div>
+        <label>Data sfarsit:</label>
+        <input asp-for="DataSfarsit" type="date" />
+    </div>
+    <button type="submit">Salveaza</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<exp.Template.Infrastructure.Entities.Hrana>
+
+<h2>Hrana</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nume</th>
+            <th>Descriere</th>
+            <th>Pret</th>
+            <th>Stoc</th>
+            <th>Detalii</th>
+            <th>Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hrana in Model)
+        {
+            <tr>
+                <td>@hrana.Nume</td>
+                <td>@hrana.Descriere</td>
+                <td>@hrana.Pret</td>
+                <td>@hrana.Stoc</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Hrana" asp-route-id="@hrana.Id">Vezi Detalii</a>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Hrana" asp-route-id="@hrana.Id">Editeaza</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

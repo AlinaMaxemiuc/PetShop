@@ -1,0 +1,12 @@
+﻿@model exp.Template.Infrastructure.Entities.Comanda
+
+<h2>Detalii Comanda</h2>
+
+<div>
+    <h3>@Model.IdUtilizator</h3>
+    <p>Abonament: @Model.IdAbonament</p>
+    <p>Data comenzii: @Model.DataComenzii</p>
+    <p>Total: @Model.Total</p>
+    <p>Discount: @Model.Discount</p>
+    <a asp-action="Index" asp-controller="Comanda">Inapoi la lista</a>
+</div>

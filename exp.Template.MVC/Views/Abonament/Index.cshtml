@@ -1,0 +1,35 @@
+﻿@model IEnumerable<exp.Template.Infrastructure.Entities.Abonament>
+
+<h2>Abonamente</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Utilizator</th>
+            <th>Hrana</th>
+            <th>Frecventa</th>
+            <th>Data incepere</th>
+            <th>Data sfarsit</th>
+            <th>Detalii</th>
+            <th>Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var abonament in Model)
+        {
+            <tr>
+                <td>@abonament.IdUtilizator</td>
+                <td>@abonament.IdHrana</td>
+                <td>@abonament.Frecventa</td>
+                <td>@abonament.DataIncepere</td>
+                <td>@abonament.DataSfarsit</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Abonament" asp-route-id="@abonament.Id">Vezi Detalii</a>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Abonament" asp-route-id="@abonament.Id">Editeaza</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

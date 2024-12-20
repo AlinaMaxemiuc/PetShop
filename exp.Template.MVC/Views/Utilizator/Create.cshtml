@@ -1,0 +1,29 @@
+﻿@model exp.Template.Infrastructure.Entities.Utilizator
+
+<h2>Create Utilizator</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Nume:</label>
+        <input asp-for="Nume" />
+    </div>
+    <div>
+        <label>Prenume:</label>
+        <input asp-for="Prenume" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email" type="email" />
+    </div>
+    <div>
+        <label>Parola:</label>
+        <input asp-for="Parola" type="password" />
+    </div>
+    <button type="submit">Salveaza</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<exp.Template.Infrastructure.Entities.Comanda>
+
+<h2>Comenzi</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Utilizator</th>
+            <th>Abonament</th>
+            <th>Data comenzii</th>
+            <th>Total</th>
+            <th>Discount</th>
+            <th>Detalii</th>
+            <th>Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comanda in Model)
+        {
+            <tr>
+                <td>@comanda.IdUtilizator</td>
+                <td>@comanda.IdAbonament</td>
+                <td>@comanda.DataComenzii</td>
+                <td>@comanda.Total</td>
+                <td>@comanda.Discount</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Comanda" asp-route-id="@comanda.Id">Vezi Detalii</a>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Comanda" asp-route-id="@comanda.Id">Editeaza</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

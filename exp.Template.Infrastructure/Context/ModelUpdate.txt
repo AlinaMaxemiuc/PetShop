@@ -1,0 +1,3 @@
+﻿  Scaffold-DbContext -Connection "Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=AnimalsFood;Encrypt=false;Persist Security Info=True"-o Entities -Provider "Microsoft.EntityFrameworkCore.SqlServer" -ContextDir Context -Context AnimalsFoodContext -force
+
+

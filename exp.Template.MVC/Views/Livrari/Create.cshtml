@@ -1,0 +1,25 @@
+﻿@model exp.Template.Infrastructure.Entities.Livrari
+
+<h2>Create Livrari</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Comanda:</label>
+        <input asp-for="IdComanda" />
+    </div>
+    <div>
+        <label>Data livrare:</label>
+        <input asp-for="DataLivrare" type="date"/>
+    </div>
+    <div>
+        <label>Adresa livrare:</label>
+        <input asp-for="AdresaLivrare" type="text" />
+    </div>
+    <button type="submit">Salveaza</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<exp.Template.Infrastructure.Entities.Discount>
+
+<h2>Discount</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Numar comenzi</th>
+            <th>Procent discount</th>
+            <th>Detalii</th>
+            <th>Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var discount in Model)
+        {
+            <tr>
+                <td>@discount.NumarComenzi</td>
+                <td>@discount.ProcentDiscount</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Discount" asp-route-id="@discount.Id">Vezi Detalii</a>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Discount" asp-route-id="@discount.Id">Editeaza</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

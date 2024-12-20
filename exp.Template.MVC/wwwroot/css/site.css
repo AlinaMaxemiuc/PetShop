@@ -1,0 +1,49 @@
+.table-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+    .table th, .table td {
+        padding: 12px;
+        border: 1px solid #ddd;
+    }
+
+    .table thead {
+        background-color: #f8f9fa;
+        font-weight: bold;
+    }
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+}
+
+.btn-sm {
+    padding: 3px 8px;
+    font-size: 0.85em;
+}

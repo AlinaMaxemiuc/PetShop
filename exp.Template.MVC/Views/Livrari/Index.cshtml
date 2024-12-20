@@ -1,0 +1,31 @@
+﻿@model IEnumerable<exp.Template.Infrastructure.Entities.Livrari>
+
+<h2>Livrari</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Comanda</th>
+            <th>Data livrare</th>
+            <th>Adresa livrare</th>
+            <th>Detalii</th>
+            <th>Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var livrare in Model)
+        {
+            <tr>
+                <td>@livrare.IdComanda</td>
+                <td>@livrare.DataLivrare</td>
+                <td>@livrare.AdresaLivrare</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Livrari" asp-route-id="@livrare.Id">Vezi Detalii</a>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Livrari" asp-route-id="@livrare.Id">Editeaza</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

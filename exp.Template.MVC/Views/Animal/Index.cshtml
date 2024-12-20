@@ -1,0 +1,33 @@
+﻿@model IEnumerable<exp.Template.Infrastructure.Entities.Animale>
+
+<h2>Animale</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Gen</th>
+            <th>Specie</th>
+            <th>Varsta</th>
+            <th>Greutate</th>
+            <th>Detalii</th>
+            <th>Actiuni</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var animal in Model)
+        {
+            <tr>
+                <td>@animal.Gen</td>
+                <td>@animal.Specie</td>
+                <td>@animal.Varsta</td>
+                <td>@animal.Greutate</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Animal" asp-route-id="@animal.Id">Vezi Detalii</a>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Animal" asp-route-id="@animal.Id">Editeaza</a> 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

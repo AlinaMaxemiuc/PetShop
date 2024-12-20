@@ -1,0 +1,29 @@
+﻿@model exp.Template.Infrastructure.Entities.Comanda
+
+<h2>Editare Comanda</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label>Utilizator:</label>
+        <input asp-for="IdUtilizator" />
+    </div>
+    <div>
+        <label>Abonament:</label>
+        <input asp-for="IdAbonament" />
+    </div>
+    <div>
+        <label>Data comenzii:</label>
+        <input asp-for="DataComenzii" type="date" />
+    </div>
+    <div>
+        <label>Total:</label>
+        <input asp-for="Total" type="text"/>
+    </div>
+    <div>
+        <label>Discount:</label>
+        <input asp-for="Discount" type="checkbox" />
+    </div>
+    <button type="submit">Salveaza</button>
+</form>
+<a asp-action="Index" asp-controller="Comanda">Inapoi la lista</a>

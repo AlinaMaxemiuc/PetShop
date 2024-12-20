@@ -1,0 +1,12 @@
+﻿@model exp.Template.Infrastructure.Entities.Abonament
+
+<h2>Detalii Abonament</h2>
+
+<div>
+    <h3>@Model.IdUtilizator</h3>
+    <p>Hrana: @Model.IdHrana</p>
+    <p>Frecventa: @Model.Frecventa zile</p>
+    <p>Data incepere: @Model.DataIncepere</p>
+    <p>Data sfarsit: @Model.DataSfarsit</p>
+    <a asp-action="Index" asp-controller="Abonament">Inapoi la lista</a>
+</div>

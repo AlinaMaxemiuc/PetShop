@@ -1,0 +1,21 @@
+﻿@model exp.Template.Infrastructure.Entities.Discount
+
+<h2>Create Discount</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Numar comenzi:</label>
+        <input asp-for="NumarComenzi" />
+    </div>
+    <div>
+        <label>Procent discount:</label>
+        <input asp-for="ProcentDiscount" />
+    </div>
+    <button type="submit">Salveaza</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

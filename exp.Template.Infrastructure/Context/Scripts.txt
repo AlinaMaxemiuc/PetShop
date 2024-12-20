@@ -1,0 +1,9 @@
+﻿  CREATE TABLE UserExtend
+  (
+  Id int IDENTITY(1,1),
+  Name NVARCHAR(255),
+  NickName  NVARCHAR(255),
+  UserId NVARCHAR(450) REFERENCES AspNetUsers(Id),
+  TenantId int not null,
+  IsDeleted bit null
+  );

@@ -1,0 +1,29 @@
+﻿@model exp.Template.Infrastructure.Entities.Animale
+
+<h2>Create Animal</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Gen:</label>
+        <input asp-for="Gen" />
+    </div>
+    <div>
+        <label>Specie:</label>
+        <input asp-for="Specie" />
+    </div>
+    <div>
+        <label>Varsta:</label>
+        <input asp-for="Varsta" type="number" />
+    </div>
+    <div>
+        <label>Greutate:</label>
+        <input asp-for="Greutate" type="number" step="0.01" />
+    </div>
+    <button type="submit">Salveaza</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

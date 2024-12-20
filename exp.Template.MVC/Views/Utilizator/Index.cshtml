@@ -1,0 +1,33 @@
+﻿@model IEnumerable<exp.Template.Infrastructure.Entities.Utilizator>
+
+<h2>Utilizatori</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nume</th>
+            <th>Prenume</th>
+            <th>Email</th>
+            <th>Parola</th>
+            <th>Detalii</th>
+            <th>Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Nume</td>
+                <td>@user.Prenume</td>
+                <td>@user.Email</td>
+                <td>@user.Parola</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Utilizator" asp-route-id="@user.Id">Vezi Detalii</a>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Utilizator" asp-route-id="@user.Id">Editeaza</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,11 @@
+﻿@model exp.Template.Infrastructure.Entities.Hrana
+
+<h2>Detalii Hrana</h2>
+
+<div>
+    <h3>@Model.Nume</h3>
+    <p>Descriere: @Model.Descriere</p>
+    <p>Pret: @Model.Pret</p>
+    <p>Stoc: @Model.Stoc/p>
+    <a asp-action="Index" asp-controller="Hrana">Inapoi la lista</a>
+</div>

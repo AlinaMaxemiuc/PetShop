@@ -1,0 +1,17 @@
+﻿@model exp.Template.Infrastructure.Entities.Discount
+
+<h2>Editare Discount</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label>Numar comenzi:</label>
+        <input asp-for="NumarComenzi" />
+    </div>
+    <div>
+        <label>Procent discount:</label>
+        <input asp-for="ProcentDiscount" />
+    </div>
+    <button type="submit">Salveaza</button>
+</form>
+<a asp-action="Index" asp-controller="Discount">Inapoi la lista</a>
